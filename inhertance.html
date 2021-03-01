@@ -1,0 +1,38 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    NAME<input type="text" id="name1"><br>
+    Roll <input type="text" id="roll"><br>
+    <input type="submit" onclick="inheritance()">
+    <script>
+        inheritance=()=>{
+            var x=document.getElementById("name1");
+            var y=document.getElementById("roll");
+            var P=new Person(x);
+            var S=new Student(x,y);
+            S.display();   
+        }
+        class Person{
+            constructor(name){
+                this.name=name;
+            }
+
+        }
+        class Student extends Person{
+           constructor(name,roll){
+               super(name);
+               this.roll=roll;
+           }
+           display(){
+               console.log("Name "+name);
+               console.log("Roll "+roll);
+           }
+        }
+    </script>
+</body>
+</html>
