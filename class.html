@@ -1,0 +1,43 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    NAME<input type="text" id="name1"><br>
+    ROLL NO  <input type="text" id="roll"><br>
+    GPA      <input type="text" id="gpa"><br><br>
+              <input type="submit" onclick="detail()">
+    <script>
+
+        detail = () => {
+            var x = document.getElementById("name1").value;
+            var y = document.getElementById("roll").value;
+            var z = document.getElementById("gpa").value;
+            var S = new Student(x, y, z);
+            S.display();
+        }
+        class Student {
+            constructor(name1, roll, gpa) {
+                this.name1 = name1;
+                this.roll = roll;
+                this.gpa = gpa;
+                
+            }
+        
+            display() {
+                console.log("name : " + this.name1);
+                console.log("roll : " + this.roll);
+                console.log("gpa : " + this.gpa);
+            }
+
+        }
+
+    </script>
+</body>
+
+</html>
